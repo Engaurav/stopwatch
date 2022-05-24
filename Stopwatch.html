@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="./css/stopwatch.css">
     <title>Stopwatch</title>
 </head>
 <body>
-    <h1>StopWatch</h1>
+    <div id="main-container">
+        <div id="main">
+            <div id="stopwatch-container">
+                <h1>Stop Watch</h1>
+                <div id="stopwatch-count">
+                    <span id="hour">00</span> :
+                    <span id="min">00</span> :
+                    <span id="sec">00</span> :
+                    <span id="msec">00</span>
+                </div>
+                <br><br>
+                <button class="button" onclick="startStopwatch()">Start</button>
+                <button class="button" onclick="stopStopwatch()">Stop</button>
+                <button class="button" onclick="resetStopwatch()">Reset</button>
+            </div>
+
+        </div>
+        <div id="aside">
+            <div id="stopwatch-detail">
+                <table>
+                    <tr>
+                        <th>Number</th>
+                        <th>List</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>First</td>
+                        <td>00:11:22</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Second</td>
+                        <td>00:21:22</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Third</td>
+                        <td>20:12:12</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./javascripts/stopwatch.js"></script>
     
 </body>
 </html>

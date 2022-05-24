@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Montserrat:wght@300&display=swap');
+
+body{
+    margin: 0;
+    background: #162666;
+}
+
+#main-container{
+    position: relative;
+    margin: 50px;
+}
+
+#main{
+    position: absolute;
+    width: 67%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    color: #c70000;
+    font-size: 2.5rem;
+}
+
+#stopwatch-container{
+    background-color: #020b2e;
+    border-radius: 10px;
+    width: 100%;
+    align-self: center;
+    padding:20px 0 40px 0;
+}
+#stopwatch-count{
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    
+}
+
+
+button{
+    background: #c70000;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#aside{
+    position: relative;
+    width: 30%;
+    float: right;
+    text-align: center;
+}
+#stopwatch-detail{
+    background:#f79d9d;
+    text-align: -webkit-center;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+tr{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+    #main{
+        position: relative;
+        width: 90%;
+    }
+    #aside{
+        margin-top: 20px;
+        position: relative;
+        width: 91%;
+        float: none;
+    }
+}
