@@ -26,32 +26,44 @@
 
         </div>
         <div id="aside">
-            <div id="stopwatch-detail">
+            <div id="current-lap-detail">
                 <table>
-                    <tr>
-                        <th>Number</th>
-                        <th>List</th>
-                        <th>Time</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>First</td>
-                        <td>00:11:22</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Second</td>
-                        <td>00:21:22</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Third</td>
-                        <td>20:12:12</td>
-                    </tr>
-                </table>
-            </div>
+                    <thead>
+                        <tr>
+                            <th>
+                                S.No
+                            </th>
+                            <th>
+                                Start Time
+                            </th>
+                            <th>
+                                End Time
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <td>1</td>
+                            <td>00:00:02:23</td>
+                            <td>00:00:03:21</td>
+                        </tr>
+                    </tbody>
 
+                </table>
+                
+            </div>
         </div>
+    </div>
+    <div id="lap-conatiner-list">
+        
+        <a class="lap-link" href="/Stopwatch.html?lap=1">
+            <div class="lap-container">
+                <span class="lap-text-click">Details of</span>
+                <span class="lap-text">#Lap 1</span>
+            </div>
+        </a>
+      
+    
     </div>
 
     <script src="./javascripts/stopwatch.js"></script>

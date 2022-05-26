@@ -8,6 +8,7 @@ body{
 #main-container{
     position: relative;
     margin: 50px;
+    min-height: 300px;
 }
 
 #main{
@@ -15,6 +16,7 @@ body{
     width: 67%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    min-height: 300px;
 }
 
 h1{
@@ -26,8 +28,9 @@ h1{
     background-color: #020b2e;
     border-radius: 10px;
     width: 100%;
+    min-height: 300px;
     align-self: center;
-    padding:20px 0 40px 0;
+    padding: 20px 0 0 0;
 }
 #stopwatch-count{
     color: white;
@@ -36,6 +39,12 @@ h1{
     
 }
 
+/* CSS for position of hour min sec msec : Start*/
+
+
+
+
+/* CSS for position of hour min sec msec : End*/
 
 button{
     background: #c70000;
@@ -54,19 +63,21 @@ button{
     float: right;
     text-align: center;
 }
-#stopwatch-detail{
-    background:#f79d9d;
-    text-align: -webkit-center;
+#current-lap-detail{
+    background:#020b2e;
     padding: 10px;
     border-radius: 20px;
     min-height: 300px;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-tr{
-    display: flex;
-    justify-content: space-between;
+table{
+    width: 100%;
 }
-
+thead{
+    color: #c70000;
+    font-size: large;
+}
 @media only screen and (max-width: 900px) {
     #main{
         position: relative;
@@ -78,4 +89,52 @@ tr{
         width: 91%;
         float: none;
     }
+    thead{
+        color: #c70000;
+        font-size: x-large;
+    }
+    tbody{
+        font-size: large;
+    }
+}
+
+#lap-conatiner-list{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+
+.lap-link{
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    margin: 15px;
+}
+
+.lap-container{
+    background:#020b2e;
+    text-align: -webkit-center;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.lap-text-click{
+    margin-top: 32%;
+    position: absolute;
+    font-size: x-large;
+    left: 36px;
+    color: #c70000;
+}
+.lap-text{
+    margin-top: 44%;
+    position: absolute;
+    font-size: x-large;
+    left: 67px;
+    border-bottom: 1px solid #c70000;
 }
