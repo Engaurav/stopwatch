@@ -170,7 +170,7 @@ function lapContainerListDisplay() {
   let lapContainerList = document.getElementById("lap-conatiner-list");
   lapContainerList.innerHTML = "";
   for (let i = 1; i <= localStorage.length; i++) {
-    let lapContainerHtml = ` <a class="lap-link" href="/index.html?lap=${i}">
+    let lapContainerHtml = ` <a class="lap-link" href="?lap=${i}">
                 <div class="lap-container">
                     <span class="lap-text-click">Details of</span>
                     <span class="lap-text">#Lap ${i}</span>
