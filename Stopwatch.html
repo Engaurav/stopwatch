@@ -19,9 +19,11 @@
                     <span id="msec">00</span>
                 </div>
                 <br><br>
-                <button class="button" onclick="startStopwatch()">Start</button>
-                <button class="button" onclick="stopStopwatch()">Stop</button>
-                <button class="button" onclick="resetStopwatch()">Reset</button>
+                <button class="button" id="start" onclick="startStopwatch()">Start</button>
+                <button class="button disable" id="stop" onclick="stopStopwatch()">Stop</button>
+                <button class="button disable" id="lap" onclick="lapStopwatch()">Lap</button>
+                <button class="button" id="reset" onclick="resetStopwatch()">Reset</button>
+               
             </div>
 
         </div>
@@ -42,11 +44,11 @@
                         </tr>
                     </thead>
                     <tbody id="tbody">
-                        <tr>
+                        <!-- <tr>
                             <td>1</td>
                             <td>00:00:02:23</td>
                             <td>00:00:03:21</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
 
                 </table>

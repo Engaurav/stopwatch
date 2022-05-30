@@ -52,8 +52,12 @@ button{
     color: white;
     padding: 10px;
     margin: 10px;
+    width: 60px;
     border-radius: 5px;
     cursor: pointer;
+}
+.disable{
+    display: none;
 }
 
 
