@@ -1,87 +1,106 @@
+/* Importing Font from GoogleFonts */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Montserrat:wght@300&display=swap');
 
+
+/* CSS for Body */
 body{
     margin: 0;
     background: #162666;
 }
 
+
+
+/*Start: CSS for Main-Container */
 #main-container{
     position: relative;
     margin: 50px;
     min-height: 300px;
 }
-
-#main{
-    position: absolute;
-    width: 67%;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    min-height: 300px;
-}
-
-h1{
-    color: #c70000;
-    font-size: 2.5rem;
-}
-
-#stopwatch-container{
-    background-color: #020b2e;
-    border-radius: 10px;
-    width: 100%;
-    min-height: 300px;
-    align-self: center;
-    padding: 20px 0 0 0;
-}
-#stopwatch-count{
-    color: white;
-    font-size: xx-large;
-    text-align: center;
-    
-}
-
-/* CSS for position of hour min sec msec : Start*/
+    /*Start: CSS For Main Div for Stopwatch Display */
+    #main{
+        position: absolute;
+        width: 67%;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        min-height: 300px;
+    }
+        /* Css for h1  */
+        h1{
+            color: #c70000;
+            font-size: 2.5rem;
+        }
 
 
+        /* CSS for stopwatch container */
+        #stopwatch-container{
+            background-color: #020b2e;
+            border-radius: 10px;
+            width: 100%;
+            min-height: 300px;
+            align-self: center;
+            padding: 20px 0 0 0;
+        }
+
+        /* Css for values like hour minute sec */
+        #stopwatch-count{
+            color: white;
+            font-size: xx-large;
+            text-align: center; 
+        }
+
+        /*Start: ...CSS for All  Button */
+        button{
+            background: #c70000;
+            border: none;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            width: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .disable{
+            display: none;
+        }
+        /*End: ...CSS for All  Button */
+
+    /*End: CSS For Main Div for Stopwatch Display */
 
 
-/* CSS for position of hour min sec msec : End*/
 
-button{
-    background: #c70000;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    width: 60px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.disable{
-    display: none;
-}
+    /*Start: CSS For Aside Div for Current Laps Display */
+    #aside{
+        position: relative;
+        width: 30%;
+        float: right;
+        text-align: center;
+    }
+
+        /* Css for lap detail div */
+        #current-lap-detail{
+            background:#020b2e;
+            padding: 10px;
+            border-radius: 20px;
+            min-height: 300px;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        /* Css for table */
+        table{
+            width: 100%;
+        }
 
 
-#aside{
-    position: relative;
-    width: 30%;
-    float: right;
-    text-align: center;
-}
-#current-lap-detail{
-    background:#020b2e;
-    padding: 10px;
-    border-radius: 20px;
-    min-height: 300px;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-table{
-    width: 100%;
-}
-thead{
-    color: #c70000;
-    font-size: large;
-}
+        /* Css for table head */
+        thead{
+            color: #c70000;
+            font-size: large;
+        }
+    /*End: CSS For Aside Div for Current Laps Display */
+
+
+/*Start: CSS for Media Width when max-width is 900px */
 @media only screen and (max-width: 900px) {
     #main{
         position: relative;
@@ -101,7 +120,13 @@ thead{
         font-size: large;
     }
 }
+/*End: CSS for Media Width when max-width is 900px */
 
+
+
+
+
+/*Start: Css for lap record container List */
 #lap-conatiner-list{
     display: flex;
     flex-direction: row;
@@ -109,36 +134,41 @@ thead{
     flex-wrap: wrap;
 }
 
+    /* Css for every lap record as Link */
+    .lap-link{
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        margin: 15px;
+    }
+    /* Css for Lap Container  */
+    .lap-container{
+        background:#020b2e;
+        text-align: -webkit-center;
+        border-radius: 20px;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
-.lap-link{
-    cursor: pointer;
-    text-decoration: none;
-    border: none;
-    margin: 15px;
-}
+    /* Css for lap number title */
+    .lap-text-click{
+        margin-top: 32%;
+        position: absolute;
+        font-size: x-large;
+        left: 36px;
+        color: #c70000;
+    }
 
-.lap-container{
-    background:#020b2e;
-    text-align: -webkit-center;
-    border-radius: 20px;
-    height: 200px;
-    width: 200px;
-    position: relative;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+    /* css for lap text */
+    .lap-text{
+        margin-top: 44%;
+        position: absolute;
+        font-size: x-large;
+        left: 67px;
+        border-bottom: 1px solid #c70000;
+    }
 
-.lap-text-click{
-    margin-top: 32%;
-    position: absolute;
-    font-size: x-large;
-    left: 36px;
-    color: #c70000;
-}
-.lap-text{
-    margin-top: 44%;
-    position: absolute;
-    font-size: x-large;
-    left: 67px;
-    border-bottom: 1px solid #c70000;
-}
+/*End: Css for lap record container List */

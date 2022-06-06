@@ -8,28 +8,52 @@
     <title>Stopwatch</title>
 </head>
 <body>
+
+    <!-- Start: Main Container  -->
+
     <div id="main-container">
+
+
+        <!-- Start : Main Div for showing Stopwatch Timer and Handle It -->
         <div id="main">
+
             <div id="stopwatch-container">
+
+                <!-- Heading For Stopwatch Title -->
                 <h1>Stop Watch</h1>
                 <div id="stopwatch-count">
-                    <span id="hour">00</span> :
-                    <span id="min">00</span> :
-                    <span id="sec">00</span> :
-                    <span id="msec">00</span>
+                    <span id="hour">00</span> :                 <!-- Id to Get Hour in Javascript and Handle It -->
+                    <span id="min">00</span> :                  <!-- Id to Get Minutte in Javascript  and Handle It-->
+                    <span id="sec">00</span> :                  <!-- Id to Get Second in Javascript  and Handle It-->
+                    <span id="msec">00</span>                   <!-- Id to Get Mili Second in Javascript  and Handle It-->
                 </div>
                 <br><br>
-                <button class="button" id="start" onclick="startStopwatch()">Start</button>
-                <button class="button disable" id="stop" onclick="stopStopwatch()">Stop</button>
-                <button class="button disable" id="lap" onclick="lapStopwatch()">Lap</button>
-                <button class="button" id="reset" onclick="resetStopwatch()">Reset</button>
-               
-            </div>
 
+                <!-- Start Button -->
+                <button class="button" id="start" onclick="startStopwatch()">Start</button>
+
+                <!-- Stop Button -->
+                <button class="button disable" id="stop" onclick="stopStopwatch()">Stop</button>
+
+                <!-- Lap Button -->
+                <button class="button disable" id="lap" onclick="lapStopwatch()">Lap</button>
+
+                <!-- Reset Button -->
+                <button class="button" id="reset" onclick="resetStopwatch()">Reset</button>
+
+            </div>
         </div>
+
+        <!-- End : Main Div for showing Stopwatch Timer and Handle It -->
+
+
+        <!-- Start : Aside Div to Show the Current Lap Detail -->
         <div id="aside">
             <div id="current-lap-detail">
+
+                <!--Start: Table To Show the Data of Lap -->
                 <table>
+                    <!-- table heading start -->
                     <thead>
                         <tr>
                             <th>
@@ -43,30 +67,50 @@
                             </th>
                         </tr>
                     </thead>
+                     <!-- table heading end -->
+
+
+                     <!-- table body start -->
                     <tbody id="tbody">
+
+                        <!-- Here is Example in manner data will Shwo here through Javascript -->
+
                         <!-- <tr>
                             <td>1</td>
                             <td>00:00:02:23</td>
                             <td>00:00:03:21</td>
                         </tr> -->
                     </tbody>
+                    <!-- table body end -->
 
                 </table>
+                <!--End: Table To Show the Data of Lap -->
                 
             </div>
         </div>
+        <!-- End : Aside Div to Show the Current Lap Detail -->
+
+        
     </div>
+
+    <!-- End: Main Container  -->
+
+
+    <!-- Start:  Lap Container contains stored Laps in LocalStorage  -->
     <div id="lap-conatiner-list">
         
-        <a class="lap-link" href="/index.html?lap=1">
+        <!-- Here is Html structure in which diffrent laps record stored send by html -->
+        
+        <!-- <a class="lap-link" href="/index.html?lap=1">    
             <div class="lap-container">
                 <span class="lap-text-click">Details of</span>
                 <span class="lap-text">#Lap 1</span>
             </div>
-        </a>
+        </a> -->
       
-    
+
     </div>
+     <!-- End:  Lap Container contains stored Laps in LocalStorage  -->
 
     <script src="./javascripts/stopwatch.js"></script>
     
